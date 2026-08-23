@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오늘의 브리핑</title>
+<style>
+  :root{
+    --bg:#FCFCFB; --wash:#F9F9F7; --ink:#2E2C27; --ink-soft:#6B6A63;
+    --ink-grey:#B4B3A8; --hairline:#E4E3DC; --clay:#C6613F; --clay-hover:#AE5133;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);}
+  body{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    color:var(--ink-soft); -webkit-font-smoothing:antialiased;}
+  .serif{font-family:"Noto Serif KR","Nanum Myeongjo",Georgia,serif;}
+  .band{width:100%;}
+  .band-top{background:var(--wash);border-bottom:1px solid var(--hairline);}
+  .band-bottom{background:var(--bg);}
+  .wrap{max-width:860px;margin:0 auto;padding:56px 28px;}
+  .daydate{font-size:13px;color:var(--ink-soft);letter-spacing:0.02em;margin-bottom:10px;}
+  .headline{font-size:36px;line-height:1.35;color:var(--ink);font-weight:600;margin:0 0 32px 0;max-width:760px;}
+  .acts{display:flex;width:100%;}
+  .act{flex:1;padding:0 20px;text-align:left;}
+  .act:first-child{padding-left:0;}
+  .act:last-child{padding-right:0;}
+  .act + .act{border-left:1px solid var(--hairline);}
+  .act-time{font-weight:600;color:var(--ink);font-size:14px;margin-bottom:8px;}
+  .act-sentence{font-size:14px;line-height:1.55;color:var(--ink-soft);}
+  .section{margin-bottom:44px;}
+  .section:last-child{margin-bottom:0;}
+  .section-heading{font-size:13px;font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:20px;}
+  .item{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--hairline);}
+  .section-heading + .item{border-top:none;padding-top:0;}
+  .item-num{font-size:13px;color:var(--ink-grey);min-width:16px;padding-top:2px;font-variant-numeric:tabular-nums;}
+  .item-body{flex:1;}
+  .item-title{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:6px;}
+  .item-sentence{font-size:14px;line-height:1.6;color:var(--ink-soft);}
+  .item-sentence a, .src{color:var(--ink-soft);text-decoration:underline;text-decoration-color:var(--ink-grey);text-underline-offset:2px;}
+  @media (max-width:640px){
+    .headline{font-size:28px;}
+    .acts{flex-direction:column;}
+    .act{padding:0;border-left:none !important;}
+    .act + .act{border-left:none;border-top:1px solid var(--hairline);padding-top:16px;margin-top:16px;}
+    .wrap{padding:40px 20px;}
+  }
+</style>
+</head>
+<body>
+<div class="band band-top">
+  <div class="wrap">
+    <div class="daydate">월요일 · 2026년 8월 10일</div>
+    <h1 class="headline serif">오늘은 회의가 한 건뿐이라, 비교적 여유로운 하루예요.</h1>
+    <div class="acts">
+      <div class="act">
+        <div class="act-time">오전 11시</div>
+        <div class="act-sentence">예산 검토 회의이 예정되어 있어요.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="band band-bottom">
+  <div class="wrap">
+    <div class="section">
+      <div class="section-heading">지금 필요한 것</div>
+      <div class="item">
+        <div class="item-num">1</div>
+        <div class="item-body">
+          <div class="item-title">오늘 자료 검토 요청</div>
+          <div class="item-sentence">강태우 님이 회의 전 자료 검토를 미리 부탁했어요.</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-heading">정리된 것</div>
+      <div class="item">
+        <div class="item-num">1</div>
+        <div class="item-body">
+          <div class="item-title">시스템 점검 공지</div>
+          <div class="item-sentence">IT지원팀이 정기 점검 일정을 안내했어요.</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-heading">AI 업계 뉴스</div>
+      <div class="item">
+        <div class="item-num">1</div>
+        <div class="item-body">
+          <div class="item-title">AI 반도체 수요 지속 증가</div>
+          <div class="item-sentence">데이터센터 확장에 따라 관련 기업 실적이 개선됐어요. — <a href="#" class="src">AI Weekly</a></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-num">2</div>
+        <div class="item-body">
+          <div class="item-title">메타, AI 인재 영입 경쟁</div>
+          <div class="item-sentence">주요 연구자 영입에 대규모 투자를 이어가고 있어요. — <a href="#" class="src">AI Weekly</a></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-num">3</div>
+        <div class="item-body">
+          <div class="item-title">OpenAI, 신규 모델 공개</div>
+          <div class="item-sentence">추론 성능이 개선된 신규 모델을 공개했어요. — <a href="#" class="src">AI Weekly</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
